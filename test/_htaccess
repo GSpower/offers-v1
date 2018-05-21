@@ -1,9 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTPS} off
-RewriteCond %{HTTP_USER_AGENT} !(Windows\ NT\ 5.1|Windows\ NT\ 5.2) [NC]
-RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-#Force www:
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^qyksonic.com [NC]
-RewriteRule ^(.*)$ http://qyksonic.com/$1 [L,R=301,NC]
